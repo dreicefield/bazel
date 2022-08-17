@@ -1,5 +1,4 @@
 def _dynamic_packages_repository_impl(ctx):
-    ctx.execute(["pwd"], quiet=False)
     ctx.execute(["python3", "{}/scripts/generator.py".format(ctx.attr.workspace)], quiet=False)
     ctx.file("WORKSPACE", 'workspace(name = "dynamic_packages_repository")')
 
