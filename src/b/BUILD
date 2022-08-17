@@ -11,5 +11,6 @@ cc_binary(
     srcs = ["b.cc"],
     deps = [
         ":b-lib",
+        "//src/a:a-lib"
     ],
 )
